@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+header {
+    background-color: #A2EBFF; /* Soft pink background */
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.company-info {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.company-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #fb6f92; /* Vibrant pink for company name */
+}
+
+.company-info p {
+    font-size: 14px;
+    color: #000; /* Black text for tagline */
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Align menu to the left */
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000; /* Black text for menu items */
+    font-size: 16px;
+    transition: 0.8ms;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    align-items: center;
+}
+
+.call-now {
+    background-color: #fb6f92; /* Vibrant pink for buttons */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 15px; /* Spacing between buttons and menu items */
+    animation: blinkButton 1s infinite;
+}
+
+@keyframes blinkButton {
+    0%, 100% {
+        background-color: #fb6f92; /* Vibrant pink */
+    }
+    50% {
+        background-color: #ff0000; /* Red for blinking effect */
+    }
+}
+
+.pay-now {
+    background-color: #fb6f92; /* Vibrant pink for buttons */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 15px;
+    position: relative;
+}
+
+
+
+    .call-now,
+    .pay-now {
+        margin-bottom: 10px;
+    }
+
+
+
+.company-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: url('https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(158, 160, 162, 0.5);
+    min-height: 50dvh, 100vh;
+    box-sizing: border-box;
+}
+
+
+
+.left-side {
+    width: 45%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 45vh; /* Start text 45% from the top */
+}
+
+.left-side h1 {
+    color: black;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 18px;
+    color: black;
+}
+
+.right-side {
+    width: 40%;
+    max-width: 400px;
+    position: relative;
+    margin-right: 40px; /* Slightly move the box away from the right side */
+    margin-top: 35vh; /* Position 35% from the top */
+    margin-bottom: 15vh; /* Position 15% from the bottom */
+}
+
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    text-decoration: none;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: 0.8ms;
+}
+
+.menu-button {
+    display: none;
+}
+
+.company-name {
+   
+    display: none;
+    
+}
+
+.mobile-view {
+    display: none;
+}
+
+@media(max-width: 768px) {
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+   
+    .company-info {
+        display: none;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+
+    .company-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        color: black;
+         
+    }
+
+    .call-now {
+        display: none;
+    }
+
+    .logo img {
+        width: 70px;
+        margin-left: 0px;
+        padding: 0px;
+    }
+
+    
+
+    .mobile-view {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0px;
+        padding: 0px;
+        flex-basis: 100%;
+       
+    }
+
+    .site-survey, .whatsapp-survey, .get-quote, .call-number {
+        text-decoration: none;
+        border-bottom: 1px solid #fb6f92;
+        display: flex;
+        flex-direction: column;
+        margin-top: 6px;
+        width: 100%;
+        padding: 0px;
+        flex-basis: 100%;
+        padding-inline: 250px;
+        
+       
+        background-color: white;
+        color: black;
+        
+    }
+
+   
+
+    .menu-button {
+        
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        z-index: 999;
+        ;
+        
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+   
+
+
+    
+
+    
+}
+
+@media(max-width: 440px){
+    .sidebar {
+        width: 100%;
+    }
+
+    
+
+    .menu-button {
+        
+        display: block;
+        position: relative;
+        top: 1px;
+        right: 5px;
+        z-index: 999;
+        
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+}
+   
